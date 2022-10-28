@@ -23,7 +23,14 @@ export class SearchEmployeeComponent implements OnInit {
       }
     )
    }
-   
+   readvalue=()=>{
+    this.myapi.editEmp(this.SearchEmp[0]).subscribe(
+      (res)=>{
+        alert("updated")
+      }
+    )
+   }
+  
  
 
    SearchEmp:any=[
