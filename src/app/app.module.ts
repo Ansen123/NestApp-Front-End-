@@ -30,6 +30,12 @@ const appRoutes:Routes=[
   },
   {
     path:"addEmp",component:AddEmployeeComponent
+  },
+  {
+    path:"viewEmp",component:ViewEmployeeComponent
+  },
+  {
+    path:"searchEmp",component:SearchEmployeeComponent
   }
 ]
 @NgModule({
