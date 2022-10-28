@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-search-employee',
@@ -7,7 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchEmployeeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myapi:ApiService) {}
+
+ empId=""
+   readvalues=()=>{
+    let data={
+      "empId":this.empId
+    }
+    console.log(data)
+    this.myapi.SearchView(data).subscribe(
+      (res)=>{
+        this.SearchEmp=res
+
+      }
+    )
+   }
+   
+ 
+
+   SearchEmp:any=[
+]
+    
 
   ngOnInit(): void {
   }

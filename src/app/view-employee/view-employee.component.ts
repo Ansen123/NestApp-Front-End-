@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-view-employee',
@@ -7,8 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewEmployeeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myapi:ApiService) {
+    this.fetchData()
+  }
+  fetchData=()=>{
+   this.myapi.EmpView().subscribe(
+     (data)=>{
+       this.view=data
+     }
+   )
+  
+   }
+   deleteEmployee=(id:any)=>{
+    let data={
+      "id":id
+    }
+    this.myapi.deleteEmp(data).subscribe(
+      (res)=>{
+        alert("Deleted")
+      }
+    )
+    this.fetchData()
+   }
 
+  
+view:any=[]
   ngOnInit(): void {
   }
 
