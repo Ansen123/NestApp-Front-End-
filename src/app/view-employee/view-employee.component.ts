@@ -19,9 +19,9 @@ export class ViewEmployeeComponent implements OnInit {
    )
   
    }
-   deleteEmployee=(id:any)=>{
+   deleteEmployee=(empId:any)=>{
     let data={
-      "id":id
+      "empId":empId
     }
     this.myapi.deleteEmp(data).subscribe(
       (res)=>{
