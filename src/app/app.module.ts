@@ -10,6 +10,10 @@ import { SecurityloginComponent } from './securitylogin/securitylogin.component'
 import { RouterModule, Routes } from '@angular/router';
 import { AdminDashbordComponent } from './admin-dashbord/admin-dashbord.component';
 import { FormsModule } from '@angular/forms';
+import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { ViewEmployeeComponent } from './view-employee/view-employee.component';
+import { SearchEmployeeComponent } from './search-employee/search-employee.component';
 
 const appRoutes:Routes=[
   {
@@ -23,6 +27,9 @@ const appRoutes:Routes=[
   },
   {
     path:"adminDashbord",component:AdminDashbordComponent
+  },
+  {
+    path:"addEmp",component:AddEmployeeComponent
   }
 ]
 @NgModule({
@@ -33,6 +40,10 @@ const appRoutes:Routes=[
     EmployeeloginComponent,
     SecurityloginComponent,
     AdminDashbordComponent,
+    AdminNavbarComponent,
+    AddEmployeeComponent,
+    ViewEmployeeComponent,
+    SearchEmployeeComponent,
 
   ],
   imports: [
