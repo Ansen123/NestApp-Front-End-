@@ -15,7 +15,8 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
 import { SearchEmployeeComponent } from './search-employee/search-employee.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TestingComponent } from './testing/testing.component';
+import { AddSecurityComponent } from './add-security/add-security.component';
+
 
 const appRoutes:Routes=[
   {
@@ -38,6 +39,9 @@ const appRoutes:Routes=[
   },
   {
     path:"searchEmp",component:SearchEmployeeComponent
+  },
+  {
+    path:"addsec",component:AddSecurityComponent
   }
 ]
 @NgModule({
@@ -52,7 +56,8 @@ const appRoutes:Routes=[
     AddEmployeeComponent,
     ViewEmployeeComponent,
     SearchEmployeeComponent,
-    TestingComponent,
+    AddSecurityComponent,
+
 
   ],
   imports: [
