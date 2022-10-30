@@ -16,6 +16,7 @@ export class AddSecurityComponent implements OnInit {
   rDate=""
   userName=""
   pass=""
+  status:boolean=false
   
   readvalues=()=>{
     let data={
@@ -31,7 +32,16 @@ export class AddSecurityComponent implements OnInit {
     console.log(data)
     this.myapi.addSec(data).subscribe(
       (response)=>{
-        alert("Data Added")
+        console.log(response)
+        alert("Successfully added Details")
+        this.sCode=""
+        this.sName=""
+        this.sPhn=""
+        this.sAddress=""
+        this.rDate=""
+        this.userName=""
+        this.pass=""
+        this.status=true
       }
     )
 

@@ -26,4 +26,10 @@ export class ApiService {
   addSec=(data:any)=>{
     return this.http.post("http://localhost:8080/addsecurity",data)
   }
+  SecView=()=>{
+    return this.http.get("http://localhost:8080/viewallsec")
+  }
+  deleteSec=(data:any)=>{
+    return this.http.post("http://localhost:8080/deletesec",data)
+  }
 }
