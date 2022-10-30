@@ -23,6 +23,14 @@ export class SearchSecurityComponent implements OnInit {
       }
     )
    }
+
+   readvalue=()=>{
+    this.myapi.UpdateSec(this.SearchSec[0]).subscribe(
+      (res)=>{
+        alert("updated")
+      }
+    )
+   }
    
    SearchSec:any=[
 ]

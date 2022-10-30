@@ -35,5 +35,13 @@ export class ApiService {
   SearchSecview=(data:any)=>{
     return this.http.post("http://localhost:8080/searchsecu",data)
   }
- 
+  UpdateSec=(data:any)=>{
+    return this.http.post("http://localhost:8080/updatesecurity",data)
+  }
+  login=(data:any)=>{
+    return this.http.post("http://localhost:8080/signin",data)
+  }
+  loginSec=(data:any)=>{
+    return this.http.post("http://localhost:8080/signinsecurity",data)
+  }
 }
