@@ -32,4 +32,8 @@ export class ApiService {
   deleteSec=(data:any)=>{
     return this.http.post("http://localhost:8080/deletesec",data)
   }
+  SearchSecview=(data:any)=>{
+    return this.http.post("http://localhost:8080/searchsecu",data)
+  }
+ 
 }
