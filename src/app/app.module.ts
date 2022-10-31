@@ -24,6 +24,7 @@ import { EmployeeDashComponent } from './employee-dash/employee-dash.component';
 import { SecurityNavbarComponent } from './security-navbar/security-navbar.component';
 import { EmployeeNavbarComponent } from './employee-navbar/employee-navbar.component';
 import { EmployeeApplayLeaveComponent } from './employee-applay-leave/employee-applay-leave.component';
+import { ViewemployeeleaveComponent } from './viewemployeeleave/viewemployeeleave.component';
 
 
 
@@ -66,6 +67,8 @@ const appRoutes:Routes=[
   },
   {
     path:"leave",component:EmployeeApplayLeaveComponent
+  },{
+    path:"leaveview",component:ViewemployeeleaveComponent
   }
 ]
 @NgModule({
@@ -90,6 +93,7 @@ const appRoutes:Routes=[
     SecurityNavbarComponent,
     EmployeeNavbarComponent,
     EmployeeApplayLeaveComponent,
+    ViewemployeeleaveComponent,
  
 
 
