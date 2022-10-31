@@ -10,14 +10,14 @@ export class EmployeeApplayLeaveComponent implements OnInit {
 
   constructor(private myapi:ApiService) { }
   type=""
-  discrip=""
+  description=""
   leaveDate=""
 emp_id=localStorage.getItem("empId")
 
   readvalues=()=>{
     let data={
       "type":this.type,
-      "discrip":this.discrip,
+      "description":this.description,
       "leaveDate":this.leaveDate,
      "emp_id":this.emp_id
     }

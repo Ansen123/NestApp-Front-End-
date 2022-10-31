@@ -8,22 +8,30 @@ import { ApiService } from '../api.service';
 })
 export class ViewemployeeleaveComponent implements OnInit {
 
-  constructor(private myapi:ApiService) {
-    this.fetchData()
+  constructor(private myapi:ApiService) {this.view() }
+
+  status=""
+
+  view=()=>{
+    this.myapi.viewLeave().subscribe(
+      (resp)=>{
+        this.leaveData=resp
+      }
+    )
   }
-  fetchData=()=>{
-   this.myapi.LeaveView().subscribe(
-     (data)=>{
-       this.viewLeave=data
-     }
-   )
-  
-   }
-   
-
-  
-viewLeave:any=[]
-
+  updateStatus=(id:any)=>{
+    let data={
+      "id":id,
+      "status":this.status
+    }
+    console.log(data)
+    this.myapi.leaveStatus(data).subscribe(
+      
+    )
+    alert("Updated Succesfully")
+    this.view()
+  }
+  leaveData:any=[]
 
   ngOnInit(): void {
   }

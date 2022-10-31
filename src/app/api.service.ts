@@ -45,12 +45,12 @@ export class ApiService {
     return this.http.post("http://localhost:8080/signinsecurity",data)
   }
   applayLeave=(data:any)=>{
-    return this.http.post("http://localhost:8080/addleave",data)
+    return this.http.post("http://localhost:8080/applyLeave",data)
   }
-  LeaveView=()=>{
-    return this.http.get("http://localhost:8080/viewallleaves")
+  viewLeave=()=>{
+    return this.http.get("http://localhost:8080/viewAllLeaves")
   }
-  leavestatus=(data:any)=>{
-    return this.http.post("http://localhost:8080/updatestatus",data)
+  leaveStatus=(data:any)=>{
+    return this.http.post("http://localhost:8080/leaveStatus",data)
   }
 }
