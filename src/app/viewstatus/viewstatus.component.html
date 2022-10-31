@@ -1,4 +1,3 @@
-<app-admin-navbar></app-admin-navbar>
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -28,15 +27,7 @@
                         <td>{{i.emp_id}}</td>
                         <td>
 
-                            <span *ngIf="i.status==0">
-                                <select name="status" id="" class="form-control" [(ngModel)]="status" >
-                                     
-                                        <option  value="1">Approve</option>
-                                    <option  value="-1">Deny</option>
-                                    
-                                </select> 
-                                <button class="btn btn-success btn-sm" (click)="updateStatus(i.id)">Update</button>                                  
-                                </span>
+                          
                                 <span *ngIf="i.status==1">
                                     Approved
                                 </span>
