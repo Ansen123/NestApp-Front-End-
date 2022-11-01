@@ -51,6 +51,6 @@ export class ApiService {
     return this.http.get("http://localhost:8080/viewAllLeaves")
   }
   leaveStatus=(data:any)=>{
-    return this.http.post("http://localhost:8080/viewAllLeaves",data)
+    return this.http.post("http://localhost:8080/leaveStatus",data)
   }
 }
