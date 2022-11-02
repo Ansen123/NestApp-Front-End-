@@ -2,28 +2,28 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 
 @Component({
-  selector: 'app-view-employee',
-  templateUrl: './view-employee.component.html',
-  styleUrls: ['./view-employee.component.css']
+  selector: 'app-view-security',
+  templateUrl: './view-security.component.html',
+  styleUrls: ['./view-security.component.css']
 })
-export class ViewEmployeeComponent implements OnInit {
+export class ViewSecurityComponent implements OnInit {
 
   constructor(private myapi:ApiService) {
     this.fetchData()
   }
   fetchData=()=>{
-   this.myapi.EmpView().subscribe(
+   this.myapi.SecView().subscribe(
      (data)=>{
-       this.view=data
+       this.viewSec=data
      }
    )
   
    }
-   deleteEmployee=(empId:any)=>{
+   deleteSecurity=(sCode:any)=>{
     let data={
-      "empId":empId
+      "sCode":sCode
     }
-    this.myapi.deleteEmp(data).subscribe(
+    this.myapi.deleteSec(data).subscribe(
       (res)=>{
         alert("Deleted")
       }
@@ -32,7 +32,7 @@ export class ViewEmployeeComponent implements OnInit {
    }
 
   
-view:any=[]
+viewSec:any=[]
   ngOnInit(): void {
   }
 
