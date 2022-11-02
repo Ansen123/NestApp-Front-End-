@@ -21,10 +21,12 @@ export class EmployeeLoginComponent implements OnInit {
      this.myapi.login(data).subscribe(
       (response:any)=>{
         if (response.length>0) {
-         localStorage.setItem("empId",response[0].empId)
+         localStorage.setItem("empId",response[0].empId),
          localStorage.setItem("e_Name",response[0].e_Name),
+         localStorage.setItem("id",response[0].id)
          console.log(response[0].empId)
          console.log(response[0].e_Name)
+         console.log(response[0].id)
           this.myrouter.navigate(["/Empdash"])
         } else {
           alert ("invalid")
