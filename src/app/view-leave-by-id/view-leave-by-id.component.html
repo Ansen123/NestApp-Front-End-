@@ -1,1 +1,48 @@
-<p>view-leave-by-id works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Employee_Id</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Apply Date</th>
+                    <th scope="col">Leave Date</th>
+
+                    <th scope="col">Reason</th>
+                    <th scope="col">Status</th>
+
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of dataD">
+                    <td>{{i.e_name}}</td>
+                    <td>{{i.emp_id}}</td>
+                    <td>{{i.type}}</td>
+                    <td>{{i.apply_date}}</td>
+                    <td>{{i.leave_date}}</td>
+                    <td>{{i.description}}</td>
+                    <td *ngIf="i.status==0">
+                        <div class="alert alert-warning" role="alert">
+                            Processing
+                          </div>
+                    </td>
+                    <td *ngIf="i.status==1">
+                        <div class="alert alert-success" role="alert">
+                            Approved
+                        </div>
+                    </td>
+                    <td *ngIf="i.status==-1">
+                        <div class="alert alert-danger" role="alert">
+                           Rejected
+                        </div>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

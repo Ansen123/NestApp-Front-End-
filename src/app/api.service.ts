@@ -53,4 +53,7 @@ export class ApiService {
   leaveStatus=(data:any)=>{
     return this.http.post("http://localhost:8080/leaveStatus",data)
   }
+  viewLeaveEmp=(data:any)=>{
+    return this.http.post("http://localhost:8080/viewLeaveById",data)
+  }
 }
