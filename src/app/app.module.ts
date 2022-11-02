@@ -25,6 +25,7 @@ import { SecurityNavbarComponent } from './security-navbar/security-navbar.compo
 import { EmployeeNavbarComponent } from './employee-navbar/employee-navbar.component';
 import { EmployeeApplayLeaveComponent } from './employee-applay-leave/employee-applay-leave.component';
 import { ViewemployeeleaveComponent } from './viewemployeeleave/viewemployeeleave.component';
+import { ViewLeaveByIdComponent } from './view-leave-by-id/view-leave-by-id.component';
 
 
 
@@ -70,6 +71,9 @@ const appRoutes:Routes=[
   },{
     path:"leaveview",component:ViewemployeeleaveComponent
   }
+  ,{
+    path:"status",component:ViewLeaveByIdComponent
+  }
 ]
 @NgModule({
   declarations: [
@@ -94,6 +98,7 @@ const appRoutes:Routes=[
     EmployeeNavbarComponent,
     EmployeeApplayLeaveComponent,
     ViewemployeeleaveComponent,
+    ViewLeaveByIdComponent,
  
 
 
