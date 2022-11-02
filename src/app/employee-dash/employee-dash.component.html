@@ -1,2 +1,38 @@
 <app-employee-navbar></app-employee-navbar>
-<p>employee-dash works!</p>
+
+ <h3>Hai {{name}} , Welcome To Nest Digital Employee Portal</h3>
+  <div class="container">
+    <div class="row">
+        <div *ngFor="let i of frofile " class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+       
+            <div class="row">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><h6><strong>Employee Name :</strong>{{i.e_Name}}</h6></li> 
+                          <li class="list-group-item"><h6><strong>   Employee Code :</strong>{{i.empId}}</h6></li>
+                          <li class="list-group-item"><h6><strong> Designation    :</strong>{{i.designation}}</h6></li>
+
+                          <li class="list-group-item"><h6><strong>Join Date       :</strong>{{i.join_date}}</h6></li>
+                          <li class="list-group-item"><h6><strong>Place           :</strong>{{i.place}}</h6></li>
+                          <li class="list-group-item"><h6><strong>Phone Number    :</strong>{{i.phoneno}}</h6></li>
+                          <li class="list-group-item"><h6><strong>E-mail          :</strong>{{i.email}}</h6></li>
+
+                        </ul>
+                        
+                      </div>
+
+
+
+
+
+                    
+                  
+            </div>
+        </div>
+    </div>
+</div>

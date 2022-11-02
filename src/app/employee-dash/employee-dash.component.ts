@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-employee-dash',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeDashComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myapi:ApiService) { 
+    this.fetchData()
+  
+      }
+      name=localStorage.getItem("e_Name")
+      abc=localStorage.getItem("empId")
 
-  ngOnInit(): void {
-  }
-
-}
+      fetchData=()=>{
+        let data={
+          
+          "empId":this.abc
+        }
+        this.myapi.SearchView(data).subscribe(
+          (res)=>{
+            this.frofile=res
+          }
+        )
+      }
+    
+      frofile:any=[]
+    
+     
+      ngOnInit(): void {
+      }
+    
+    }
