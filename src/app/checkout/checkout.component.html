@@ -1,0 +1,32 @@
+<app-security-navbar></app-security-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Employee ID</th>
+                    <th scope="col">Employee Code</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Login Time
+                    
+                    
+                    </th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of dataData">
+                    <td>{{i.id}}</td>
+                    <td>{{i.emp_id}}</td>
+                    <td>{{i.emp_code}}</td>
+                    <td>{{i.e_name}}</td>
+                    <td>{{i.login_time}}</td>
+                    <td><button class="btn btn-danger" (click)="readValue(i.id)" >Checkout</button></td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
