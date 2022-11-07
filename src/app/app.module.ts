@@ -28,6 +28,7 @@ import { ViewemployeeleaveComponent } from './viewemployeeleave/viewemployeeleav
 import { ViewLeaveByIdComponent } from './view-leave-by-id/view-leave-by-id.component';
 import { CheckinComponent } from './checkin/checkin.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { LogviewadminComponent } from './logviewadmin/logviewadmin.component';
 
 
 
@@ -80,6 +81,9 @@ const appRoutes:Routes=[
   },
   {
     path:"out",component:CheckoutComponent
+  },
+  {
+    path:"alllog",component:LogviewadminComponent
   }
 ]
 @NgModule({
@@ -108,6 +112,7 @@ const appRoutes:Routes=[
     ViewLeaveByIdComponent,
     CheckinComponent,
     CheckoutComponent,
+    LogviewadminComponent,
  
 
 
