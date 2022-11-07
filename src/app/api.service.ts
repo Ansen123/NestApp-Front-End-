@@ -56,8 +56,16 @@ export class ApiService {
   viewLeaveEmp=(data:any)=>{
     return this.http.post("http://localhost:8080/viewLeaveById",data)
   }
- 
   addCheckin=(data:any)=>{
     return this.http.post("http://localhost:8080/checkin",data)
+  }
+  Checkout=(data:any)=>{
+    return this.http.post("http://localhost:8080/checkout",data)
+  }
+  viewCheckIn=()=>{
+    return this.http.get("http://localhost:8080/viewlogdetails")
+  }
+  viewallLog=()=>{
+    return this.http.get("http://localhost:8080/viewlogdetails")
   }
 }
