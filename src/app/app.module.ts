@@ -26,6 +26,7 @@ import { EmployeeNavbarComponent } from './employee-navbar/employee-navbar.compo
 import { EmployeeApplayLeaveComponent } from './employee-applay-leave/employee-applay-leave.component';
 import { ViewemployeeleaveComponent } from './viewemployeeleave/viewemployeeleave.component';
 import { ViewLeaveByIdComponent } from './view-leave-by-id/view-leave-by-id.component';
+import { CheckinComponent } from './checkin/checkin.component';
 
 
 
@@ -73,6 +74,8 @@ const appRoutes:Routes=[
   }
   ,{
     path:"status",component:ViewLeaveByIdComponent
+  },{
+    path:"in",component:CheckinComponent
   }
 ]
 @NgModule({
@@ -99,6 +102,7 @@ const appRoutes:Routes=[
     EmployeeApplayLeaveComponent,
     ViewemployeeleaveComponent,
     ViewLeaveByIdComponent,
+    CheckinComponent,
  
 
 
