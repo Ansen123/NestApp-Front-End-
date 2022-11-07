@@ -21,8 +21,9 @@ export class SecurityLoginComponent implements OnInit {
      this.myapi.loginSec(data).subscribe(
       (response:any)=>{
         if (response.length>0) {
-         localStorage.setItem("name",response[0].name)
-         localStorage.setItem("id",response[0].id)
+          localStorage.setItem("name",response[0].s_name),
+          localStorage.setItem("id",response[0].id),
+          localStorage.setItem("sec_code",response[0].s_code)
           this.myrouter.navigate(["/secdash"])
      
          
